@@ -1,0 +1,29 @@
+capture_interval: 10       # seconds between captures
+cleanup_age: 300           # seconds before an image is considered old and deleted
+image_dir: "captured_images"
+camera_index: 0
+dataset_dir: "dataset_images"
+dataset_capture_interval: 20 # seconds between captures for the dataset
+max_duration_seconds: 120 #14400 # maximum duration for the dataset capture in seconds
+
+
+prompt: |
+  You are a highly accurate image analysis system. Given the provided image, determine whether there is water on the floor.
+  Please analyze the image carefully and return a JSON object in plain text (do not include any markdown formatting, code fences, or triple backticks) with the following keys:
+  - "water_detected": (boolean) true if water is present on the floor, false otherwise.
+  - "confidence": (number) a value between 0 and 100 representing your confidence in the detection.
+  - "analysis_reason": (string) a concise explanation describing the visual indicators or factors that led to your decision.
+  
+  Return only the JSON object exactly as specified, with no additional commentary or formatting. 
+
+
+camera:
+  # type: "reolink"         # "reolink" "or "local"
+  type: local
+  ip: "192.168.1.12"      # used if type is "reolink"
+  user: "admin"
+  password: "Krgsesam1+2=3"
+
+google_drive:
+  enabled: true
+  service_account_file: "credentials/katodiskbeskyttelseServiceAccount.json"

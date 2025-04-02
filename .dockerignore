@@ -1,0 +1,16 @@
+# Exclude files/folders not needed in the image
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git
+.venv
+venv/
+*.log
+
+# Exclude data folders from the image itself
+dataset_images/
+captured_images/
+
+# IMPORTANT: Exclude secrets file from the image
+.env

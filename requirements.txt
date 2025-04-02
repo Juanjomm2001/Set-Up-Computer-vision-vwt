@@ -1,0 +1,17 @@
+# OpenCV for local camera capture
+opencv-python
+
+# HTTP requests for Reolink snapshot & Veolia API
+requests
+
+# YAML for reading config.yaml
+PyYAML
+
+# .env support for sensitive credentials
+python-dotenv
+
+# Google Drive integration for uploading images
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
